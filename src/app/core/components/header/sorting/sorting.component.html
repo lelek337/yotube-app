@@ -1,0 +1,8 @@
+<div class="sorting none">
+  <p>Sorting by:</p>
+  <button appDataFilter mat-button class="date"  (click)="dataClick()">Date</button>
+  <button mat-button class="count-views" (click)="viewClick()">Count of views</button>
+  <button mat-button class="word-sentance">By word of sentance</button>
+  <input type="text" (input)="onTextInput($event)">
+</div>
+

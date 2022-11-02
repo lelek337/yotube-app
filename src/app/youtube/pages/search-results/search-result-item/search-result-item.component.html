@@ -1,0 +1,14 @@
+
+<div class="search-result-item">
+  <app-video-thumbnail [item]="item"></app-video-thumbnail>
+  <div class="items-counts">
+    <app-views-count selector="app-view-count" [item]="item"></app-views-count>
+    <app-likes-count [item]="item"></app-likes-count>
+    <app-dislikes-count [item]="item"></app-dislikes-count>
+    <app-coments-count [item]="item"></app-coments-count>
+  </div>
+  <app-video-title [item]="item"></app-video-title>
+  <app-more-button [item]="item"></app-more-button>
+</div>
+
+

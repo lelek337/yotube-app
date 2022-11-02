@@ -1,0 +1,65 @@
+
+<form
+appearance="fill"
+class="form"
+[formGroup]="form"
+novalidate
+>
+  <h2>Login</h2>
+  <mat-form-field class="login">
+    <mat-label>Enter your login</mat-label>
+    <input type="text" matInput formControlName="login">
+  </mat-form-field>
+  <mat-form-field class="email">
+    <mat-label>Enter your email</mat-label>
+  <input type="text" matInput formControlName="email">
+  <p
+    class="alert alert-danger"
+    *ngIf="form.controls['email'].invalid && form.controls['email'].touched"
+  >
+    The login email is invalid
+  </p>
+  </mat-form-field>
+  <mat-form-field class="password">
+    <mat-label>Enter your password</mat-label>
+    <div class="input-password">
+      <input
+      matInput
+      [type]="hide ? 'password' : 'text'"
+      formControlName="pass"
+      >
+      <button mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+      >
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </div>
+  </mat-form-field>
+  <div
+    class="alert alert-danger"
+    *ngIf="form.controls['pass'].invalid && form.controls['pass'].touched"
+  >
+    Your password isn't strong enough
+    <span *ngIf="form.controls['pass'].errors?.['lengthError']"
+      >at least 8 characters</span
+    >
+    <span *ngIf="form.controls['pass'].errors?.['checkForLetters']"
+      >a mixture of both uppercase and lowercase letters</span
+    >
+    <span *ngIf="form.controls['pass'].errors?.['numberLetterError']"
+      >a mixture of letters and numbers</span
+    >
+    <span *ngIf="form.controls['pass'].errors?.['specialCharacterError']"
+      >inclusion of at least one special character, e.g., ! @ # ? ]</span
+    >
+  </div>
+  <button
+  mat-button
+  class="button-login"
+  [disabled]="form.invalid"
+  (click)="onSubmit()"
+  > Login input </button>
+</form>

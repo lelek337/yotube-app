@@ -1,0 +1,18 @@
+<mat-toolbar >
+  <mat-toolbar-row class="header-toolbar">
+    <app-logo></app-logo>
+  <app-search-input ></app-search-input>
+  <app-settings-button></app-settings-button>
+  <div class="your-name">
+    <div>{{yourLogin ? yourLogin : 'Your Login'}}</div>
+    <button (click)="onClick()" mat-button>{{visibleButton ? 'Input' : 'Output'}}</button>
+    <img src="./assets/svg/login.svg" alt="login">
+  </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="header-toolbar">
+    <app-sorting></app-sorting>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+

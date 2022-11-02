@@ -1,0 +1,25 @@
+.details-card {
+  button {
+    background-color: #2f80ED;
+  }
+}
+
+.for-button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.counts {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

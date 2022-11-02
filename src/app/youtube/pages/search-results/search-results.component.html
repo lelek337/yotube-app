@@ -1,0 +1,16 @@
+<div class="search-result">
+  <app-search-result-item
+  selector="app-search-result-item"
+  *ngFor="let item of fetchedVideos; index as idx"
+  [item]="item"
+  appColorLine
+  ></app-search-result-item>
+  <app-add-card
+  *ngFor="let card of cards"
+  [card]="card"
+  ></app-add-card>
+  <div>
+    <button mat-button class="add-button" (click)="onClick()">Add new Card</button>
+  </div>
+</div>
+

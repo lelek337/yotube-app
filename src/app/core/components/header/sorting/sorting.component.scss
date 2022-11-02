@@ -1,0 +1,25 @@
+@import '/src/app/variablesSCSS.scss';
+
+.sorting {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  button {
+    border: none;
+    color: $logoColor;
+    margin-left: 1rem;
+    height: 1.8rem;
+    border-bottom: $logoColor 2px solid;
+  }
+  input {
+    height: 1.5rem;
+    border: none;
+    background-color: $sortingColor;
+    margin-left: 1rem;
+  }
+}
+
+.none {
+  display: none;
+}

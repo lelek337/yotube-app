@@ -1,0 +1,11 @@
+@import 'src/app/variablesSCSS.scss';
+
+.search-result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1em;
+  row-gap: 1em;
+  button {
+    background-color: $logoColor;
+  }
+}

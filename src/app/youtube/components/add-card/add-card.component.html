@@ -1,0 +1,8 @@
+<div class="card">
+  <h2 >{{ card.title }}</h2>
+  <p >{{ card.discription }}</p>
+  <img src="{{ card.linkImage }}" alt="linkImg">
+  <a  href="{{ card.linkVideo }}">Link Video</a>
+  <p>PublishedAt: {{ card.creationDate | date: 'shortTime' }}</p>
+</div>
+

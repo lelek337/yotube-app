@@ -1,0 +1,36 @@
+@import 'src/app/variablesSCSS.scss';
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 35vw;
+  margin: 5vh 50vw ;
+  font-size: 3vh;
+  background-color: $headerColor;
+  div {
+    margin-bottom: 2vh;
+  }
+  input {
+    margin-top: 1vh;
+  }
+}
+
+.input-password {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.button-login {
+  margin-left: 60%;
+  background-color: $logoColor;
+}
+
+input.ng-touched.ng-invalid {
+  border: solid red 2px;
+}
+
+input.ng-touched.ng-valid {
+  border: solid green 2px;
+}
